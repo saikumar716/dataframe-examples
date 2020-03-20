@@ -6,7 +6,11 @@ import org.apache.spark.sql.functions._
 
 object  nestedJson2Df {
   def main(args: Array[String]): Unit = {
-    val sparkSession = SparkSession.builder.master("local[2]").appName("Multi Line Json To DF").getOrCreate()
+    val sparkSession = SparkSession
+        .builder
+        .master("local[2]")
+        .appName("Multi Line Json To DF")
+        .getOrCreate()
     sparkSession.sparkContext.setLogLevel(Constants.ERROR)
 
 
